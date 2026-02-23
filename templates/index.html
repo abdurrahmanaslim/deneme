@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Muhasebe Servisi</title>
+</head>
+<body>
+    <h1>Muhasebe İşlem Girişi</h1>
+    <form action="/add" method="post">
+        Açıklama: <input type="text" name="desc" placeholder="Örn: Yemek bedeli" required><br><br>
+        Tutar: <input type="number" name="amount" required><br><br>
+        Borçlu Hesap:
+        <select name="debit_acc">
+            <option value="770">770 - Genel Yönetim Giderleri</option>
+            <option value="100">100 - Kasa</option>
+        </select><br><br>
+        Alacaklı Hesap:
+        <select name="credit_acc">
+            <option value="100">100 - Kasa</option>
+            <option value="600">600 - Yurtiçi Satışlar</option>
+        </select><br><br>
+        <button type="submit">İşlemi Kaydet</button>
+    </form>
+    <hr>
+    <a href="/balance-sheet">Güncel Bakiyeleri Gör</a>
+</body>
+</html>
